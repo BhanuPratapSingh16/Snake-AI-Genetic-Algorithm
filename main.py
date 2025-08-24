@@ -2,7 +2,7 @@ from genetic_algorithm import *
 from simulate import *
 from model import *
 
-POP_SIZE = 500
+POP_SIZE = 5000
 GENERATIONS = 30
 INDIVIDUAL_SIZE = 24 * 18 + 18 * 18 + 54
 np.random.seed(42)
@@ -35,3 +35,4 @@ for gen in range(GENERATIONS):
     visualize(best_individual.copy())
 
     population = evolve_population(population, np.array(fitness_scores))
+
